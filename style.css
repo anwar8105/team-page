@@ -1,0 +1,98 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-size: 1rem;
+  box-sizing: border-box;
+  line-height: 1.5;
+  background-color: #e8eae6;
+  color: #7c9473;
+}
+
+.wrapper {
+  width: 90%;
+  max-width: 71.25rem;
+  margin: 2em auto;
+}
+
+h1 {
+  font-family: "Playfair Display";
+  font-style: normal;
+  margin-bottom: 2em;
+  border-bottom: 4px solid #ccc;
+  color: #7c9473;
+}
+
+h2 {
+  text-transform: uppercase;
+  margin-bottom: 0.3em;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.img-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 8.75rem);
+  grid-row-gap: 40px;
+  align-items: start;
+  justify-content: space-between;
+  padding: 0.4em;
+}
+
+.img {
+  display: flex;
+}
+
+.img figcaption {
+  font-family: "Lato";
+  writing-mode: vertical-rl;
+  margin-left: 2px;
+  text-transform: uppercase;
+  letter-spacing: 1.1px;
+}
+
+figure p {
+  font-weight: 700;
+  margin-top: 8px;
+}
+
+figure:nth-child(2),
+figure:nth-child(4),
+figure:nth-child(6) {
+  margin-top: 1.125em;
+}
+
+/* media queries */
+@media screen and (min-width: 63rem) {
+  .flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .about-crew {
+    max-width: 300px;
+    align-self: center;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+  .img-content {
+    grid-template-columns: repeat(3, 15.25rem);
+  }
+
+  figure:nth-child(2),
+  figure:nth-child(5) {
+    margin-top: 3em;
+  }
+}
